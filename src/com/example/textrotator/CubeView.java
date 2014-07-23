@@ -62,7 +62,7 @@ public class CubeView extends View {
 	  
 	  postInvalidate();
 	 } 
-	 
+	 //
 	 @Override
 	 public boolean onTouchEvent(MotionEvent event) {
 	  int x = (int) event.getX();
