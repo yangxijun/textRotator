@@ -1,29 +1,14 @@
 package com.example.textrotator;
 
-import android.R.integer;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Camera;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.Path.Direction;
-import android.graphics.Point;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.webkit.WebSettings.TextSize;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class CubeView extends View {
+public class CubeView2 extends View {
 	// 摄像机
 	private Camera mCamera;
 
@@ -37,7 +22,7 @@ public class CubeView extends View {
 	// 转动的总距离
 	private int deltaX;
 
-	public CubeView(Context context, AttributeSet attributeSet) {
+	public CubeView2(Context context, AttributeSet attributeSet) {
 		super(context, attributeSet);
 		setWillNotDraw(false);
 		mCamera = new Camera();
@@ -54,7 +39,7 @@ public class CubeView extends View {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 
-		rotate(-1, canvas);
+		rotate(-2, canvas);
 		postInvalidate();
 
 	}
@@ -102,8 +87,8 @@ public class CubeView extends View {
 
 		canvas.setMatrix(mMatrix);
 //		canvas.drawText("GO短信", getWidth() / 1.5f, getHeight() / 1.5f, mPaint);
-		canvas.drawText("GO桌面", getWidth() / 2, getHeight() / 2, mPaint);
-//		canvas.drawText("GO天气", getWidth() / 3, getHeight() / 3, mPaint);
+//		canvas.drawText("GO桌面", getWidth() / 2, getHeight() / 2, mPaint);
+		canvas.drawText("GO天气", getWidth() / 3, getHeight() / 3, mPaint);
 
 		mCamera.save();
 
