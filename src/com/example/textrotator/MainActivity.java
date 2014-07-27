@@ -16,12 +16,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
 		LayoutInflater inflater = LayoutInflater.from(this);
-		View textLayout1 = inflater.inflate(R.layout.rotate1, null);
-		View textLayout2 = inflater.inflate(R.layout.rotate2, null);
-		mainLayout.addView(textLayout1);
-		mainLayout.addView(textLayout2);
+		View textLayout = inflater.inflate(R.layout.rotate, null);
 
-		textLayout1.setOnClickListener(new OnClickListener() {
+		mainLayout.addView(textLayout);
+
+
+		textLayout.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -29,14 +29,7 @@ public class MainActivity extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
-		textLayout2.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "GO天气",
-						Toast.LENGTH_SHORT).show();
-			}
-		});
 	}
 
 }
