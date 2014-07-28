@@ -16,19 +16,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.main_layout);
 		LayoutInflater inflater = LayoutInflater.from(this);
-		View textLayout = inflater.inflate(R.layout.rotate, null);
+		View textSphere = inflater.inflate(R.layout.rotate, null);
 
-		mainLayout.addView(textLayout);
+		mainLayout.addView(textSphere);
 
 
-		textLayout.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "GO桌面",
-						Toast.LENGTH_SHORT).show();
-			}
-		});
 
 	}
 
